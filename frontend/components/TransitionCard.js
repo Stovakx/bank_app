@@ -54,10 +54,10 @@ export default function TransactionCard({
         </View>
       </View>
 
-      <View className="space-y-1">
+      <View className="space-y-1 ">
         {/* Amount */}
         <Text
-          className="text-xl"
+          className="text-xl text-right "
           style={{
             fontFamily: "SpaceGroteskBold",
           }}

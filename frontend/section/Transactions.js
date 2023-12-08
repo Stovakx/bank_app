@@ -4,8 +4,8 @@ import { transactionData } from "../utils/data";
 import TransitionCard from "../components/TransitionCard";
 import Animated, { FadeInDown} from "react-native-reanimated";
 
-
 export default function Transactions() {
+
   return (
     <Animated.View
       className="mt-8"
@@ -22,9 +22,8 @@ export default function Transactions() {
       </Text>
 
       {/* Cards */}
-
       <FlatList
-        data={transactionData}
+        data={[...transactionData].reverse()}
         keyExtractor={(item) => item.id}
         initialNumToRender={20}
         contentContainerStyle={{ paddingBottom: 150 }}
