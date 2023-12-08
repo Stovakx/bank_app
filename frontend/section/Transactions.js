@@ -27,7 +27,7 @@ export default function Transactions() {
         data={transactionData}
         keyExtractor={(item) => item.id}
         initialNumToRender={20}
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={{ paddingBottom: 150 }}
         removeClippedSubviews={false}
         height={400}
         renderItem={({ item }) => <TransitionCard {...item} />}

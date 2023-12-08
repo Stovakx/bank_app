@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
-import { SafeAreaView,  } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Card from "../section/Card";
 import Transactions from "../section/Transactions";
 import Header from "../section/Header";
@@ -32,7 +32,7 @@ export default function HomeScreen() {
       <StatusBar style={colorScheme == "dark" ? "light" : "dark"} />
 
       <View onLayout={onLayoutRootView}>
-        <View className="my-6">
+        <View className="mb-6">
           <Header />
 
           <Card />
