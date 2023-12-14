@@ -1,6 +1,6 @@
 import { View, Text, Dimensions, Image } from "react-native";
 import React from "react";
-
+import { FontStyles } from "../styles/fonts";
 const { width, height } = Dimensions.get("window");
 
 export default function TransactionCard({
@@ -35,9 +35,7 @@ export default function TransactionCard({
           {/* Name */}
           <Text
             className="text-2xl"
-            style={{
-              fontFamily: "SpaceGroteskBold",
-            }}
+            style={FontStyles.SpaceGroteskBold}
           >
             {name}
           </Text>
@@ -45,9 +43,7 @@ export default function TransactionCard({
           {/* Type */}
           <Text
             className="text-sm text-neutral-500"
-            style={{
-              fontFamily: "SpaceGroteskMedium",
-            }}
+            style={FontStyles.SpaceGroteskMedium}
           >
             {type}
           </Text>
@@ -58,9 +54,7 @@ export default function TransactionCard({
         {/* Amount */}
         <Text
           className="text-xl text-right "
-          style={{
-            fontFamily: "SpaceGroteskBold",
-          }}
+          style={FontStyles.SpaceGroteskBold}
         >
           {amount}
         </Text>
@@ -68,9 +62,7 @@ export default function TransactionCard({
         {/* Date */}
         <Text
           className="text-sm text-neutral-500"
-          style={{
-            fontFamily: "SpaceGroteskBold",
-          }}
+          style={FontStyles.SpaceGroteskBold}
         >
           {date}
         </Text>

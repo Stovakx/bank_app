@@ -1,10 +1,25 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StatusBar,
+  useColorScheme,
+} from "react-native";
+import React from "react";
+import Header from "../section/Header";
+import Balance from "../components/Balance";
 export default function ProfileScreen() {
+  const { colorScheme, toggleColorScheme } = useColorScheme();
+  const page = "profile"
   return (
-    <View>
-      <Text>ProfileScreen</Text>
-    </View>
-  )
+    <>
+      <StatusBar style={colorScheme == "dark" ? "light" : "dark"} />
+      <SafeAreaView className={"p-6 dark:bg-neutral-900"}>
+        <Header page={page}></Header>
+        <View>
+          <Balance/>
+        </View>
+      </SafeAreaView>
+    </>
+  );
 }

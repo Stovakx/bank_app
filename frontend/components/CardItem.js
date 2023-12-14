@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Dimensions, Image } from "react-native";
 import React from "react";
-
+import { FontStyles } from "../styles/fonts";
 const { width, height } = Dimensions.get("window");
 
 export default function CardItem({
@@ -32,9 +32,7 @@ export default function CardItem({
         <View className="space-y-2">
           <Text
             className="text-lg text-white"
-            style={{
-              fontFamily: "SpaceGroteskBold",
-            }}
+            style={FontStyles.SpaceGroteskBold}
           >
             {cardNumber}
           </Text>
@@ -43,18 +41,14 @@ export default function CardItem({
         <View className="space-y-2">
           <Text
             className="text-2xl text-white"
-            style={{
-              fontFamily: "SpaceGroteskBold",
-            }}
+            style={FontStyles.SpaceGroteskBold}
           >
             {price}
           </Text>
 
           <Text
             className="font-medium text-lg text-white"
-            style={{
-              fontFamily: "SpaceGroteskBold",
-            }}
+            style={FontStyles.SpaceGroteskBold}
           >
             {cardType}
           </Text>

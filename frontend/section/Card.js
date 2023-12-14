@@ -3,6 +3,7 @@ import React from "react";
 import { carousalData } from "../utils/data";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import CardItem from "../components/CardItem";
+import { FontStyles } from "../styles/fonts";
 
 export default function Card() {
   return (
@@ -11,9 +12,7 @@ export default function Card() {
       entering={FadeInDown.duration(500).springify().delay(200)}
     >
       <Text
-        style={{
-          fontFamily: "SpaceGroteskBold",
-        }}
+        style={FontStyles.SpaceGroteskBold}
         className="text-4xl mb-4 dark:text-white"
       >
         Cards
