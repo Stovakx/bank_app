@@ -4,10 +4,10 @@ import HomeScreen from "../screens/HomeScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import SettingsScreen from "../screens/SettingsScreen";
-import TransactionsDetailScreen from "../screens/TransactionsDetailScreen";
-import CloseBtn from "../components/CloseBtn";
+import DetailScreen from "../screens/DetailScreen";
 const Stack = createNativeStackNavigator();
-/*          */
+
+
 export default function Navigation() {
   return (
     <NavigationContainer>
@@ -20,7 +20,7 @@ export default function Navigation() {
         <Stack.Screen name="Profile" component={ProfileScreen}/>
         <Stack.Screen name="Notifications" options={{presentation: "modal"}} component={NotificationScreen}/>
         <Stack.Screen name="Settings" component={SettingsScreen}/>
-        <Stack.Screen name="TransactionDetails" component={TransactionsDetailScreen} options={{presentation:"modal",
+        <Stack.Screen name="DetailScreen" component={DetailScreen} options={{presentation:"modal",
        }}/>
       </Stack.Navigator>
     </NavigationContainer>

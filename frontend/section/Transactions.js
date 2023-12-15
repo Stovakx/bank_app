@@ -1,32 +1,29 @@
 import { View, Text, FlatList } from "react-native";
 import React from "react";
 import { transactionData } from "../utils/data";
-import TransitionCard from "../components/TransitionCard";
-import Animated, { FadeInDown} from "react-native-reanimated";
+import TransactionCard from "../components/TransactionCard";
+import Animated, { FadeInDown } from "react-native-reanimated";
+import { StyledText } from "../styles/styles";
 
 export default function Transactions() {
-//TODO: horhom/bottom-sheet add do 70% obrazovky aby bylo vidět aspoň 10%
+  //TODO: horhom/bottom-sheet add do 70% obrazovky aby bylo vidět aspoň 10%
   return (
     <Animated.View
       className="mt-8"
       entering={FadeInDown.duration(500).springify().delay(300)}
     >
       {/* Title */}
-      <Text
-        className="text-3xl dark:text-white mb-4"
-      >
-        Last Transactions
-      </Text>
+      <StyledText className="text-3xl mb-4" >Last Transactions</StyledText>
 
       {/* Cards */}
       <FlatList
         data={[...transactionData].reverse()}
         keyExtractor={(item) => item.id}
         initialNumToRender={20}
-        contentContainerStyle={{ paddingBottom: 150 }}
+        contentContainerStyle={{ paddingBottom: 170 }}
         removeClippedSubviews={false}
         height={400}
-        renderItem={({ item }) => <TransitionCard {...item} />}
+        renderItem={({ item }) => <TransactionCard data={item}/>}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => <View className="h-4" />}
       />

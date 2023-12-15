@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity, Dimensions, Image } from "react-native";
+import { View, TouchableOpacity, Dimensions, Image } from "react-native";
 import React from "react";
+import { StyledText } from "../styles/styles";
 const { width, height } = Dimensions.get("window");
 
 export default function CardItem({
@@ -29,27 +30,27 @@ export default function CardItem({
         />
 
         <View className="space-y-2">
-          <Text
+          <StyledText
             className="text-lg text-white"
           >
             {cardNumber}
-          </Text>
+          </StyledText>
         </View>
 
         <View className="space-y-2">
-          <Text
+          <StyledText
             className="text-2xl text-white"
 
           >
             {price}
-          </Text>
+          </StyledText>
 
-          <Text
+          <StyledText
             className="font-medium text-lg text-white"
 
           >
             {cardType}
-          </Text>
+          </StyledText>
         </View>
       </View>
     </TouchableOpacity>

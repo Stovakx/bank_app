@@ -15,7 +15,6 @@ export default function Body() {
   // Přidání "type" do všech objektů
   const combinedDataType = combinedData.map((item) => ({
     ...item,
-    type: transactionData.includes(item) ? "transaction" : "notification",
   }));
 
   //seřazení dat podle data a času
@@ -27,6 +26,7 @@ export default function Body() {
   const renderItem = ({ item }) => (
     <NotificationCard data={item} />
   )
+
   return (
     <View className=" pt-4 bg-blend-lighten w-full flex justify-center items-center dark:bg-neutral-900 shadow-black shadow-xl ">
       <FlatList

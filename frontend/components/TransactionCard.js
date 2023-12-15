@@ -4,13 +4,10 @@ import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
 export default function TransactionCard({
-  name,
-  type,
-  amount,
-  date,
-  imageSource,
+data
 }) {
   const navigation = useNavigation();
+  
   return (
     <TouchableOpacity
       className="rounded-3xl py-8 px-4 justify-between flex-row items-center bg-[#e5e5e5] shadow-sm"
@@ -19,12 +16,12 @@ export default function TransactionCard({
         maxWidth: width,
         height: height * 0.12,
       }}
-      onPress={()=> navigation.navigate('TransactionDetails')}
+      onPress={()=> navigation.navigate('DetailScreen', {data})}
     >
       <View className="flex-row space-x-6 items-center justify-center">
         <View className="bg-white rounded-xl">
           <Image
-            source={imageSource}
+            source={data.imageSource}
             style={{
               width: 65,
               height: 65,
@@ -39,7 +36,7 @@ export default function TransactionCard({
             className="text-2xl"
 
           >
-            {name}
+            {data.name}
           </Text>
 
           {/* Type */}
@@ -47,7 +44,7 @@ export default function TransactionCard({
             className="text-sm text-neutral-500"
 
           >
-            {type}
+            {data.description}
           </Text>
         </View>
       </View>
@@ -55,16 +52,16 @@ export default function TransactionCard({
       <View className="space-y-1 ">
         {/* Amount */}
         <Text
-          className="text-xl text-right "
+          className={`${data.typeOfTransaction === "costs" ?"text-red-500":"text-green-500"} text-xl text-right`}
         >
-          {amount}
+          {data.amount}
         </Text>
 
         {/* Date */}
         <Text
           className="text-sm text-neutral-500"
         >
-          {date}
+          {data.date}
         </Text>
       </View>
     </TouchableOpacity>
