@@ -4,6 +4,7 @@ import * as Icon from "react-native-heroicons/outline";
 import { useColorScheme } from "nativewind";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { useNavigation } from "@react-navigation/native";
+import ProfileIcon from "../components/ProfileIcon";
 
 export default function Header({ page }) {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -16,18 +17,8 @@ export default function Header({ page }) {
       className="flex-row justify-between items-center mx-4"
       entering={FadeInDown.duration(500).springify().delay(100)}
     >
-      <View className="border-2 border-white rounded-full overflow-hidden my-4">
-        <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
-          <Image
-            source={require("../assets/images/avatar.png")}
-            style={{
-              width: 45,
-              height: 45,
-            }}
-          />
-        </TouchableOpacity>
-      </View>
 
+      <ProfileIcon/>
       {/* Notifications and Switch Icon */}
       <View className="flex-row space-x-4 justify-center items-center">
         {page === "profile" ? (

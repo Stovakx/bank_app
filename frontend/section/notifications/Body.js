@@ -1,24 +1,41 @@
-import { View, Text, FlatList } from 'react-native'
-import React from 'react'
-import NotificationCard from '../../components/NotificationCard'
+import { View, Text, FlatList } from "react-native";
+import React from "react";
+import NotificationCard from "../../components/NotificationCard";
+import { transactionData, notificationsData } from "../../utils/data";
+
+//spojení dat a vytvoření unique klíče podle pořadí?
+const combinedData = [...transactionData, ...notificationsData].map(
+  (item, index) => ({
+    ...item,
+    uniqueKey: index.toString(),
+  })
+);
 
 export default function Body() {
-  return (
-    <View className=" pt-4 h-10 bg-blend-lighten w-full flex justify-center items-center shadow-black shadow-xl ">
-      <View>
-        <Text className="text-xl dark:text-white ">The Newest Notifications</Text>
-      </View>
-      <View className="bg-black dark:bg-white w-full h-1 my-2"/>
-{/*       <FlatList 
-        data={allData}
-        keyExtractor={((item)=> item.name)}
-        initialNumToRender={20}
-        contentContainerStyle={{ paddingBottom: 150 }}
-        showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <View className="h-4" />}
-        renderItem={({ item }) => <NotificationCard {...item} />}
-      /> */}
+  // Přidání "type" do všech objektů
+  const combinedDataType = combinedData.map((item) => ({
+    ...item,
+    type: transactionData.includes(item) ? "transaction" : "notification",
+  }));
 
-    </View>
+  //seřazení dat podle data a času
+  const sortedData = combinedDataType.sort((a, b) => {
+    const dateA = new Date(a.date + " " + a.time);
+    const dateB = new Date(b.date + " " + b.time);
+    return dateA - dateB;
+  });
+  const renderItem = ({ item }) => (
+    <NotificationCard data={item} />
   )
+  return (
+    <View className=" pt-4 bg-blend-lighten w-full flex justify-center items-center dark:bg-neutral-900 shadow-black shadow-xl ">
+      <FlatList
+        renderItem={renderItem}
+        keyExtractor={(item) => item.uniqueKey}
+        data={sortedData.reverse()}
+        ItemSeparatorComponent={() => <View className="h-4" 
+        />}
+      />
+    </View>
+  );
 }

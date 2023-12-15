@@ -3,7 +3,6 @@ import React from "react";
 import { transactionData } from "../utils/data";
 import TransitionCard from "../components/TransitionCard";
 import Animated, { FadeInDown} from "react-native-reanimated";
-import { FontStyles } from "../styles/fonts";
 
 export default function Transactions() {
 //TODO: horhom/bottom-sheet add do 70% obrazovky aby bylo vidět aspoň 10%
@@ -15,7 +14,6 @@ export default function Transactions() {
       {/* Title */}
       <Text
         className="text-3xl dark:text-white mb-4"
-        style={FontStyles.SpaceGroteskBold}
       >
         Last Transactions
       </Text>

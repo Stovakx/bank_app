@@ -157,6 +157,7 @@ export const notificationsData = [
     description: 'Nová transakce: Připsány úroky na spořicím účtu.',
     date: '2023-12-08',
     time: '09:15',
+    type: "Notification"
   },
   {
     id: 2,
@@ -164,6 +165,7 @@ export const notificationsData = [
     description: 'Platba kartou Visa v obchodě XYZ ve výši 800 Kč.',
     date: '2023-12-08',
     time: '12:30',
+    type: "Notification"
   },
   {
     id: 3,
@@ -171,6 +173,7 @@ export const notificationsData = [
     description: 'Získali jste 5% cashback z nákupu v supermarketu.',
     date: '2023-12-09',
     time: '15:20',
+    type: "Notification"
   },
   {
     id: 4,
@@ -178,6 +181,7 @@ export const notificationsData = [
     description: 'Přijal(a) jste převod od přítele na částku 1500 Kč.',
     date: '2023-12-10',
     time: '10:00',
+    type: "Notification"
   },
   {
     id: 5,
@@ -185,6 +189,7 @@ export const notificationsData = [
     description: 'Blížíte se svému měsíčnímu limitu na platební kartě.',
     date: '2023-12-11',
     time: '18:45',
+    type: "Notification"
   },
   {
     id: 6,
@@ -192,6 +197,7 @@ export const notificationsData = [
     description: 'Proveďte ověření identity pro zvýšení bezpečnosti účtu.',
     date: '2023-12-12',
     time: '14:10',
+    type: "Notification"
   },
   {
     id: 7,
@@ -199,6 +205,7 @@ export const notificationsData = [
     description: 'Děkujeme, že používáte naši peněženku. Máte speciální nabídku na další transakci!',
     date: '2023-12-13',
     time: '11:30',
+    type: "Notification"
   },
   {
     id: 8,
@@ -206,6 +213,7 @@ export const notificationsData = [
     description: 'Připomínáme, že máte splatnou fakturu na elektrickou energii.',
     date: '2023-12-14',
     time: '08:00',
+    type: "Notification"
   },
   {
     id: 9,
@@ -213,6 +221,7 @@ export const notificationsData = [
     description: 'Stáhněte si nejnovější verzi naší mobilní aplikace pro lepší zážitek.',
     date: '2023-12-15',
     time: '16:40',
+    type: "Notification"
   },
   {
     id: 10,
@@ -220,6 +229,7 @@ export const notificationsData = [
     description: 'Ohodnoťte naši aplikaci a sdílejte svůj názor s námi. Děkujeme!',
     date: '2023-12-16',
     time: '13:15',
+    type: "Notification"
   },
 ];
 

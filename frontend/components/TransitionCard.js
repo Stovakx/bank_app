@@ -1,6 +1,6 @@
-import { View, Text, Dimensions, Image } from "react-native";
+import { View, Text, Dimensions, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import { FontStyles } from "../styles/fonts";
+import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
 export default function TransactionCard({
@@ -10,14 +10,16 @@ export default function TransactionCard({
   date,
   imageSource,
 }) {
+  const navigation = useNavigation();
   return (
-    <View
+    <TouchableOpacity
       className="rounded-3xl py-8 px-4 justify-between flex-row items-center bg-[#e5e5e5] shadow-sm"
       style={{
         width: "100%",
         maxWidth: width,
         height: height * 0.12,
       }}
+      onPress={()=> navigation.navigate('TransactionDetails')}
     >
       <View className="flex-row space-x-6 items-center justify-center">
         <View className="bg-white rounded-xl">
@@ -35,7 +37,7 @@ export default function TransactionCard({
           {/* Name */}
           <Text
             className="text-2xl"
-            style={FontStyles.SpaceGroteskBold}
+
           >
             {name}
           </Text>
@@ -43,7 +45,7 @@ export default function TransactionCard({
           {/* Type */}
           <Text
             className="text-sm text-neutral-500"
-            style={FontStyles.SpaceGroteskMedium}
+
           >
             {type}
           </Text>
@@ -54,7 +56,6 @@ export default function TransactionCard({
         {/* Amount */}
         <Text
           className="text-xl text-right "
-          style={FontStyles.SpaceGroteskBold}
         >
           {amount}
         </Text>
@@ -62,11 +63,10 @@ export default function TransactionCard({
         {/* Date */}
         <Text
           className="text-sm text-neutral-500"
-          style={FontStyles.SpaceGroteskBold}
         >
           {date}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
