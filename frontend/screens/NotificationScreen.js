@@ -4,6 +4,7 @@ import Header from "../section/notifications/Header";
 import Body from "../section/notifications/Body";
 import { useRoute } from "@react-navigation/native";
 
+
 export default function NotificationScreen() {
   const [transactionTypeFilter, setTransactionTypeFilter] = useState("all");
   const [timePeriodFilter, setTimePeriodFilter] = useState("all");

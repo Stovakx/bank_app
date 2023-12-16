@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get("window");
 
 export default function CardItem({
   imgUrl,
-  price,
+  balance,
   cardType,
   cardNumber,
   backgroundColor,
@@ -42,7 +42,7 @@ export default function CardItem({
             className="text-2xl text-white"
 
           >
-            {price}
+            {balance}
           </StyledText>
 
           <StyledText

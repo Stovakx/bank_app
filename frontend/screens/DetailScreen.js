@@ -4,6 +4,8 @@ import Header from "../section/Header";
 import { StyledSafeAreaView, StyledText } from "../styles/styles";
 import { useNavigation } from "@react-navigation/native";
 import Btn from "../components/btn";
+
+//TODO: vypsat navigates (onPress) pro každé tlačítko, screens pro to, popřípadně připojit na správný Screen.
 export default function DetailScreen({ route }) {
   const data = route.params?.data || null;
   const navigation = useNavigation();

@@ -2,45 +2,45 @@ export const carousalData = [
   {
     id: 1,
     imgUrl: require("../assets/images/visa.png"),
-    price: 2345,
+    balance: 2345,
     cardType: "VISA",
-    cardNumber: "****1234",
+    cardNumber: "12341234",
     backgroundColor: "#0f60d6",
     textColor: "white",
   },
   {
     id: 2,
     imgUrl: require("../assets/images/mastercard.png"),
-    price: 4654,
+    balance: 4654,
     cardType: "MasterCard",
-    cardNumber: "****5678",
+    cardNumber: "12345678",
     backgroundColor: "purple",
     textColor: "white",
   },
   {
     id: 3,
     imgUrl: require("../assets/images/stripe.png"),
-    price: 3300,
+    balance: 3300,
     cardType: "Stripe",
-    cardNumber: "****9876",
+    cardNumber: "56789876",
     backgroundColor: "#55a630",
     textColor: "white",
   },
   {
     id: 4,
     imgUrl: require("../assets/images/discover.png"),
-    price: 1700,
+    balance: 1700,
     cardType: "Discover",
-    cardNumber: "****5432",
+    cardNumber: "54325432",
     backgroundColor: "gray",
     textColor: "#ea468e",
   },
   {
     id: 5,
     imgUrl: require("../assets/images/paypal.png"),
-    price: 2100,
+    balance: 2100,
     cardType: "PayPal",
-    cardNumber: "****2468",
+    cardNumber: "24682468",
     backgroundColor: "purple",
     textColor: "white",
   },
@@ -62,6 +62,7 @@ export const transactionData = [
     variableSymbol: "24680",
     from: { bankAcount: "1234567890", userName: "Job Company s.r.o.", bankCode: "5500" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
+    card:"VISA",
   },
   {
     id: 2,
@@ -76,6 +77,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "5555123498", userName: "Freelance Site", bankCode: "3030" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
+    card:"Stripe",
   },
   {
     id: 3,
@@ -90,6 +92,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "8765432109", userName: "Johan Valunturk", bankCode: "2412" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
+    card:"VISA",
   },
   {
     id: 4,
@@ -104,6 +107,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "1111222233", userName: "Netflix", bankCode: "7761" },
+    card:"MasterCard",
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "8901234567", userName: "Amazon", bankCode: "6481" },
+    card:"VISA",
   },
   {
     id: 6,
@@ -132,6 +137,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "6789012345", userName: "Firm a.s.", bankCode: "8753" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
+    card:"Discover",
   },
   {
     id: 7,
@@ -146,6 +152,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "3456789012", userName: "Spotify", bankCode: "4461" },
+    card:"MasterCard",
   },
   {
     id: 8,
@@ -160,6 +167,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "1234567890", userName: "Shop X&Y", bankCode: "4646" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
+    card:"PayPal",
   },
   {
     id: 9,
@@ -174,6 +182,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "7890123456", userName: "YouTube", bankCode: "4632" },
+    card:"Stripe",
   },
   {
     id: 10,
@@ -188,6 +197,7 @@ export const transactionData = [
     variableSymbol: "98765",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "9012345678", userName: "Apple", bankCode: "6632" },
+    card:"PayPal",
   },
 ];
 
@@ -306,3 +316,13 @@ carousalData.forEach((item) => {
     currency: "USD",
   });
 });
+
+
+export const person =[
+  {
+    firstName:"Markéta",
+    lastName:"Nováková",
+    phoneNumber:"777 123 456",
+    email:"marketa.novakova@gmail.cz"
+  }
+]

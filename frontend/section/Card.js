@@ -25,7 +25,7 @@ export default function Card() {
           <CardItem
             key={item.id}
             imgUrl={item.imgUrl}
-            price={item.price}
+            balance={item.balance}
             cardType={item.cardType}
             cardNumber={item.cardNumber}
             backgroundColor={item.backgroundColor}
