@@ -1,6 +1,6 @@
 import { StatusBar } from "react-native";
 import React from "react";
-import { useColorScheme, useEffect } from "nativewind";
+import { useColorScheme } from "nativewind";
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 

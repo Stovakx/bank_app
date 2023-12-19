@@ -47,7 +47,6 @@ export const carousalData = [
   // Add more items as needed
 ];
 
-
 export const transactionData = [
   {
     id: 1,
@@ -60,9 +59,13 @@ export const transactionData = [
     imageSource: require("../assets/images/paycheck.png"),
     typeOfTransaction: "income",
     variableSymbol: "24680",
-    from: { bankAcount: "1234567890", userName: "Job Company s.r.o.", bankCode: "5500" },
+    from: {
+      bankAcount: "1234567890",
+      userName: "Job Company s.r.o.",
+      bankCode: "5500",
+    },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
-    card:"VISA",
+    card: "VISA",
   },
   {
     id: 2,
@@ -75,9 +78,13 @@ export const transactionData = [
     imageSource: require("../assets/images/contraLogo.jpg"),
     typeOfTransaction: "income",
     variableSymbol: "",
-    from: { bankAcount: "5555123498", userName: "Freelance Site", bankCode: "3030" },
+    from: {
+      bankAcount: "5555123498",
+      userName: "Freelance Site",
+      bankCode: "3030",
+    },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
-    card:"Stripe",
+    card: "Stripe",
   },
   {
     id: 3,
@@ -90,9 +97,13 @@ export const transactionData = [
     imageSource: require("../assets/images/gift.webp"),
     typeOfTransaction: "income",
     variableSymbol: "",
-    from: { bankAcount: "8765432109", userName: "Johan Valunturk", bankCode: "2412" },
+    from: {
+      bankAcount: "8765432109",
+      userName: "Johan Valunturk",
+      bankCode: "2412",
+    },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
-    card:"VISA",
+    card: "VISA",
   },
   {
     id: 4,
@@ -107,7 +118,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "1111222233", userName: "Netflix", bankCode: "7761" },
-    card:"MasterCard",
+    card: "MasterCard",
   },
   {
     id: 5,
@@ -122,7 +133,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "8901234567", userName: "Amazon", bankCode: "6481" },
-    card:"VISA",
+    card: "VISA",
   },
   {
     id: 6,
@@ -137,7 +148,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "6789012345", userName: "Firm a.s.", bankCode: "8753" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
-    card:"Discover",
+    card: "Discover",
   },
   {
     id: 7,
@@ -152,7 +163,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "3456789012", userName: "Spotify", bankCode: "4461" },
-    card:"MasterCard",
+    card: "MasterCard",
   },
   {
     id: 8,
@@ -167,7 +178,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "1234567890", userName: "Shop X&Y", bankCode: "4646" },
     to: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
-    card:"PayPal",
+    card: "PayPal",
   },
   {
     id: 9,
@@ -182,7 +193,7 @@ export const transactionData = [
     variableSymbol: "",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "7890123456", userName: "YouTube", bankCode: "4632" },
-    card:"Stripe",
+    card: "Stripe",
   },
   {
     id: 10,
@@ -197,7 +208,7 @@ export const transactionData = [
     variableSymbol: "98765",
     from: { bankAcount: "9876543210", userName: "Me", bankCode: "8080" },
     to: { bankAcount: "9012345678", userName: "Apple", bankCode: "6632" },
-    card:"PayPal",
+    card: "PayPal",
   },
 ];
 
@@ -210,7 +221,7 @@ export const notificationsData = [
     time: "09:15",
     type: "Notification",
     typeOfNoti: "transactions",
-    amount:"$35"
+    amount: "$35",
   },
   {
     id: 2,
@@ -220,7 +231,7 @@ export const notificationsData = [
     time: "12:30",
     type: "Notification",
     typeOfNoti: "transactions",
-    amount:"$78"
+    amount: "$78",
   },
   {
     id: 3,
@@ -230,7 +241,7 @@ export const notificationsData = [
     time: "15:20",
     type: "Notification",
     typeOfNoti: "cashback",
-    amount:"$25"
+    amount: "$25",
   },
   {
     id: 4,
@@ -240,7 +251,7 @@ export const notificationsData = [
     time: "10:00",
     type: "Notification",
     typeOfNoti: "transactions",
-    amount:"$200"
+    amount: "$200",
   },
   {
     id: 5,
@@ -250,8 +261,8 @@ export const notificationsData = [
     time: "18:45",
     type: "Notification",
     typeOfNoti: "limit",
-    amount:"$50000",
-    card:"Visa"
+    amount: "$50000",
+    card: "Visa",
   },
   {
     id: 6,
@@ -261,7 +272,7 @@ export const notificationsData = [
     time: "14:10",
     type: "Notification",
     typeOfNoti: "security",
-    amount:""
+    amount: "",
   },
   {
     id: 7,
@@ -272,7 +283,7 @@ export const notificationsData = [
     time: "11:30",
     type: "Notification",
     typeOfNoti: "Bonuses",
-    amount:"$5"
+    amount: "$5",
   },
   {
     id: 8,
@@ -283,7 +294,7 @@ export const notificationsData = [
     time: "08:00",
     type: "Notification",
     typeOfNoti: "maturity",
-    amount:""
+    amount: "",
   },
   {
     id: 9,
@@ -294,7 +305,7 @@ export const notificationsData = [
     time: "16:40",
     type: "Notification",
     typeOfNoti: "aplication",
-    amount:""
+    amount: "",
   },
   {
     id: 10,
@@ -305,24 +316,34 @@ export const notificationsData = [
     time: "13:15",
     type: "Notification",
     typeOfNoti: "aplication",
-    amount:""
+    amount: "",
   },
 ];
 
+
+export let sum = 0;
+export const totalBalance =carousalData.forEach(item=>{
+  sum += item.balance;
+})
+
+
+
 // Format the price property to be a string with dollar formatting
 carousalData.forEach((item) => {
-  item.price = item.price.toLocaleString("en-US", {
+  item.balance = item.balance.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
   });
 });
 
 
-export const person =[
+export const person = [
   {
-    firstName:"Markéta",
-    lastName:"Nováková",
-    phoneNumber:"777 123 456",
-    email:"marketa.novakova@gmail.cz"
-  }
-]
+    firstName: "Markéta",
+    lastName: "Nováková",
+    phoneNumber: "777 123 456",
+    email: "marketa.novakova@gmail.cz",
+    pw: "randomPw23",
+    createdAt: "23.12.2015",
+  },
+];

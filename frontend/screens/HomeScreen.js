@@ -2,10 +2,9 @@ import { View } from "react-native";
 import Card from "../section/Card";
 import Transactions from "../section/Transactions";
 import Header from "../section/Header";
-import { StyledSafeAreaView } from "../styles/styles";
+import { StyledSafeAreaView } from "../styles";
 
 export default function HomeScreen() {
-
   return (
     <StyledSafeAreaView>
       <View>

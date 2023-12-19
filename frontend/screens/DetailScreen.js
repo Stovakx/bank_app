@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 import React from "react";
 import Header from "../section/Header";
-import { StyledSafeAreaView, StyledText } from "../styles/styles";
+import { StyledSafeAreaView, StyledText } from "../styles/index";
 import { useNavigation } from "@react-navigation/native";
 import Btn from "../components/btn";
 

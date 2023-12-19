@@ -3,7 +3,7 @@ import React from "react";
 import { transactionData } from "../utils/data";
 import TransactionCard from "../components/TransactionCard";
 import Animated, { FadeInDown } from "react-native-reanimated";
-import { StyledText } from "../styles/styles";
+import { StyledText } from "../styles";
 
 export default function Transactions() {
   //TODO: horhom/bottom-sheet add do 70% obrazovky aby bylo vidět aspoň 10%

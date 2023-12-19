@@ -1,6 +1,6 @@
 import { View, TouchableOpacity, Dimensions, Image } from "react-native";
 import React from "react";
-import { StyledText } from "../styles/styles";
+import { StyledText } from "../styles";
 const { width, height } = Dimensions.get("window");
 
 export default function CardItem({
