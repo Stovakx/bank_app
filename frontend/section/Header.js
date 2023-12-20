@@ -17,8 +17,13 @@ export default function Header({ page }) {
       className="flex-row justify-between items-center mx-4"
       entering={FadeInDown.duration(500).springify().delay(100)}
     >
-
-      <ProfileIcon/>
+      {page === "Home" ? (
+        <ProfileIcon />
+      ) : (
+        <TouchableOpacity onPress={()=>navigation.goBack()}>
+          <Icon.ArrowLeftIcon size={26} color={colorScheme == "dark" ? "white" : "black"} />
+        </TouchableOpacity>
+      )}
       {/* Notifications and Switch Icon */}
       <View className="flex-row space-x-4 justify-center items-center">
         {page === "profile" ? (

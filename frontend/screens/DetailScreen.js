@@ -5,7 +5,7 @@ import { StyledSafeAreaView, StyledText } from "../styles/index";
 import { useNavigation } from "@react-navigation/native";
 import Btn from "../components/btn";
 
-//TODO: vypsat navigates (onPress) pro každé tlačítko, screens pro to, popřípadně připojit na správný Screen.
+//TODO: vypsat navigates (onPress) pro každé tlačítko
 export default function DetailScreen({ route }) {
   const data = route.params?.data || null;
   const navigation = useNavigation();
@@ -140,7 +140,7 @@ export default function DetailScreen({ route }) {
             </View>
             <View className="flex-row justify-end">
               <Btn
-                onPress={() => navigation.navigate("Settings")}
+                onPress={() => navigation.navigate("Setting")}
                 className=" w-36 h-12  rounded-lg items-center justify-center "
                 starCol={"#6366f1"}
                 middleCol={"#a855f7"}

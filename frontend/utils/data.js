@@ -320,13 +320,10 @@ export const notificationsData = [
   },
 ];
 
-
 export let sum = 0;
-export const totalBalance =carousalData.forEach(item=>{
+const totalBalance = carousalData.forEach((item) => {
   sum += item.balance;
-})
-
-
+});
 
 // Format the price property to be a string with dollar formatting
 carousalData.forEach((item) => {
@@ -335,8 +332,7 @@ carousalData.forEach((item) => {
     currency: "USD",
   });
 });
-
-
+//TODO: přidat datum narození(u bankovích apps docela důležité data)
 export const person = [
   {
     firstName: "Markéta",
@@ -346,4 +342,15 @@ export const person = [
     pw: "randomPw23",
     createdAt: "23.12.2015",
   },
+];
+
+export const settings = [
+  { id: 1, name: "Profile"},
+  { id: 2, name: "Card Settings" },
+  { id: 3, name: "Cashbacks" },
+  { id: 4, name: "Limits" },
+  { id: 5, name: "Language and Currency" },
+  { id: 6, name: "Help" },
+  { id: 7, name: "About" },
+  { id: 8, name: "Log out" },
 ];
