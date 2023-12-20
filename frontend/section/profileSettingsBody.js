@@ -1,5 +1,6 @@
-import { Alert, View } from "react-native";
-import { CustomTextInput, StyledText } from "../styles";
+import { Alert, View, Modal } from "react-native";
+import { StyledText } from "../styles";
+import { CustomTextInput } from "../components/customTextInput";
 import React from "react";
 import Btn from "../components/btn";
 import { person } from "../utils/data";
@@ -13,6 +14,7 @@ const ProfileSettingsBody = ({}) => {
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const [isPasswordChanged, setIsPasswordChanged] = React.useState(false);
   const [currentPassword, setCurrentPassword] = React.useState("");
+  const [modalVisible, setModalVisible] = React.useState(false);
 
   const handlePasswordChange = (value) => {
     setPassword(value);
@@ -37,6 +39,14 @@ const ProfileSettingsBody = ({}) => {
       password,
       confirmPassword,
     });
+  };
+
+  const toggleModal = () => {
+    setModalVisible();
+  };
+
+  const passwordConfirmation = (value) => {
+    setCurrentPassword(value);
   };
 
   return (
@@ -76,17 +86,48 @@ const ProfileSettingsBody = ({}) => {
         )}
         <View className="items-center">
           <Btn
-            text={"Change Informations"}
+            text={"Confirm changes"}
             starCol={"#e879f9"}
             endCol={"#a855f7"}
             middleCol={"#a21caf"}
             className="p-4 rounded-full items-center w-[80%]"
-            onPress={() => submitForm()}
+            onPress={()=> submitForm()}
           />
         </View>
+        {/* Modální okno pro zadání stávajícího hesla */}
+   
       </View>
     </View>
   );
 };
 
 export default ProfileSettingsBody;
+
+/*      <Modal visible={modalVisible} transparent animationType="slide">
+          <View>
+            <CustomTextInput
+              secureTextEntry
+              placeholder={"Current Password"}
+              value={currentPassword}
+              onChangeText={handlePasswordChange}
+            />
+            <Btn
+              text={"Confirm"}
+              starCol={"#e879f9"}
+              endCol={"#a855f7"}
+              middleCol={"#a21caf"}
+              className="p-4 rounded-full items-center w-[80%]"
+              onPress={() => {
+                submitForm();
+              }}
+            />
+            <Btn
+              text={"Cancel"}
+              starCol={"#e879f9"}
+              endCol={"#a855f7"}
+              middleCol={"#a21caf"}
+              className="p-4 rounded-full items-center w-[80%]"
+              onPress={toggleModal}
+            />
+          </View>
+        </Modal> */

@@ -346,7 +346,7 @@ export const person = [
 
 export const settings = [
   { id: 1, name: "Profile"},
-  { id: 2, name: "Card Settings" },
+  { id: 2, name: "Cards Settings" },
   { id: 3, name: "Cashbacks" },
   { id: 4, name: "Limits" },
   { id: 5, name: "Language and Currency" },
