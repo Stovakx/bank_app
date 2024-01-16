@@ -4,6 +4,7 @@ import Header from "../section/Header";
 import { StyledSafeAreaView, StyledText } from "../styles/index";
 import { useNavigation } from "@react-navigation/native";
 import Btn from "../components/btn";
+import FilterBar from "../components/filterBar";
 
 //TODO: vypsat navigates (onPress) pro každé tlačítko
 export default function DetailScreen({ route }) {
@@ -13,7 +14,7 @@ export default function DetailScreen({ route }) {
   return (
     <StyledSafeAreaView>
       <Header />
-
+      <FilterBar  />
       <View className="mt-6">
         {data.typeOfNoti === "transactions" || data.type === "transaction" ? (
           <>

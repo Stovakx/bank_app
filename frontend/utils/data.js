@@ -332,15 +332,17 @@ carousalData.forEach((item) => {
     currency: "USD",
   });
 });
-//TODO: přidat datum narození(u bankovích apps docela důležité data)
+//TODO: přidat datum narození(u bankovích apps docela důležité data, přidat fotku uživatele do person)
 export const person = [
   {
     firstName: "Markéta",
     lastName: "Nováková",
     phoneNumber: "777 123 456",
     email: "marketa.novakova@gmail.cz",
+    birthDay: "23.10.1992",
     pw: "randomPw23",
     createdAt: "23.12.2015",
+    profilePicture: require('../assets/images/avatar.png')
   },
 ];
 

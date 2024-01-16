@@ -6,6 +6,7 @@ import ProfileScreen from "../screens/ProfileScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import DetailScreen from "../screens/DetailScreen";
 import SettingScreen from "../screens/SettingScreen";
+import AllTransactionsScreen from  "../screens/AllTransactionsScreen";
 const Stack = createNativeStackNavigator();
 
 
@@ -23,6 +24,7 @@ export default function Navigation() {
         <Stack.Screen name="Settings" component={SettingsScreen}/>
         <Stack.Screen name="DetailScreen" component={DetailScreen} options={{presentation:"modal",}}/>
         <Stack.Screen name="Setting" component={SettingScreen} options={{presentation:"fullScreenModal"}}/>
+        <Stack.Screen name="AllTransactionsScreen" component={AllTransactionsScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

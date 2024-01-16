@@ -91,11 +91,10 @@ const ProfileSettingsBody = ({}) => {
             endCol={"#a855f7"}
             middleCol={"#a21caf"}
             className="p-4 rounded-full items-center w-[80%]"
-            onPress={()=> submitForm()}
+            onPress={() => submitForm()}
           />
         </View>
         {/* Modální okno pro zadání stávajícího hesla */}
-   
       </View>
     </View>
   );
@@ -103,14 +102,15 @@ const ProfileSettingsBody = ({}) => {
 
 export default ProfileSettingsBody;
 
-/*      <Modal visible={modalVisible} transparent animationType="slide">
+/* TODO: background atd, kde se zobrazí, opravit stylizaci tlačítek atd atd... 
+      <Modal visible={modalVisible} transparent animationType="slide">
           <View>
-            <CustomTextInput
-              secureTextEntry
-              placeholder={"Current Password"}
-              value={currentPassword}
-              onChangeText={handlePasswordChange}
-            />
+        <CustomTextInput
+          label={"Password"}
+          value={password}
+          onChange={handlePasswordChange}
+          secureTextEntry={true}
+        />
             <Btn
               text={"Confirm"}
               starCol={"#e879f9"}

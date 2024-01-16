@@ -17,7 +17,7 @@ const Balance = () => {
         <StyledText className="text-xl font-semibold">$ {sum}</StyledText>
       </View>
       <View className="ml-10 ">
-        <Btn text={"More info"} starCol={"#e879f9"} endCol={"#a855f7"} middleCol={"#a21caf"} className="p-3 rounded-full" onPress={()=>navigation.navigate()}  />
+        <Btn text={"More info"} starCol={"#e879f9"} endCol={"#a855f7"} middleCol={"#a21caf"} className="p-3 rounded-full" onPress={()=>navigation.navigate("AllTransactionsScreen")}  />
       </View>
     </View>
   );
