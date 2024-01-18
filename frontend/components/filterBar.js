@@ -1,6 +1,5 @@
 import { View } from "react-native";
-/* předělat na react-native-picker-select, je hezčí pro ios vzhledově vůči tomu, co od toho čekáš */
-import { Picker } from "@react-native-picker/picker";
+import RNPickerSelect from "react-native-picker-select";
 import { StyledText } from "../styles";
 import React, { useState } from "react";
 
@@ -10,22 +9,22 @@ const FilterBar = ({ onSelectFilter, filters }) => {
 
   const yearRange = () => {
     const currentYear = new Date().getFullYear();
-    const years = Array.from({ length: currentYear - 1999 }, (_, index) =>
-      (currentYear - index).toString()
-    );
+    const years = Array.from({ length: currentYear - 1999 }, (_, index) => ({
+      label: (currentYear - index).toString(),
+      value: (currentYear - index).toString(),
+    }));
     return years;
   };
 
   const dayRange = (selectedYear, selectedMonth) => {
     if (!selectedYear || !selectedMonth) {
-      // Pokud není vybrán měsíc, zobrazí se 31 dní
-      return Array.from({ length: 31 }, (_, index) => (index + 1).toString());
+      return [];
     }
-
     const daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
-    const days = Array.from({ length: daysInMonth }, (_, index) =>
-      (index + 1).toString()
-    );
+    const days = Array.from({ length: daysInMonth }, (_, index) => ({
+      label: (index + 1).toString(),
+      value: (index + 1).toString(),
+    }));
     return days;
   };
 
@@ -33,59 +32,52 @@ const FilterBar = ({ onSelectFilter, filters }) => {
     const months = Array.from({ length: 12 }, (_, index) => {
       const date = new Date(0, index);
       const monthName = date.toLocaleDateString(undefined, { month: "long" });
-      return { value: (index + 1).toString(), label: monthName };
+      return { label: monthName, value: (index + 1).toString() };
     });
     return months;
   };
 
   return (
-    <View classname="space-y-1">
-      <View>
+    <View classname="">
+      <View classname="my-3">
         <StyledText style={"text-2xl"}>Filters</StyledText>
       </View>
-      <View classname="flex-row justify-center">
-        <Picker
-          selectedValue={filters.year}
-          onValueChange={(value) => {
-            onSelectFilter("year", value);
-            setSelectedYear(value);
-          }}
-        >
-          {yearRange().map((year) => (
-            <Picker.Item key={year} label={year} value={year} />
-          ))}
-        </Picker>
+      <View classname="flex-row justify-center space-y-3">
+        <View>
+          <RNPickerSelect
+            darkTheme={true}
+            placeholder={{ label: "Select Year", value: null }}
+            items={yearRange()}
+            value={filters.year}
+            onValueChange={(value) => {
+              onSelectFilter("year", value);
+              setSelectedYear(value);
+            }}
+          />
+        </View>
 
-        <Picker
-          selectedValue={filters.month}
+        <RNPickerSelect
+          darkTheme={true}
+          placeholder={{ label: "Select Month", value: null }}
+          items={monthRange()}
+          value={filters.month}
           onValueChange={(value) => {
             onSelectFilter("month", value);
             setSelectedMonth(value);
           }}
-        >
-          {monthRange().map((month) => (
-            <Picker.Item
-              key={month.value}
-              label={month.label}
-              value={month.value}
-            />
-          ))}
-        </Picker>
+        />
 
         {selectedMonth && (
-          <Picker
-            selectedValue={filters.day}
+          <RNPickerSelect
+            darkTheme={true}
+            placeholder={{ label: "Select Day", value: null }}
+            items={dayRange(selectedYear, selectedMonth)}
+            value={filters.day}
             onValueChange={(value) => onSelectFilter("day", value)}
-          >
-            {dayRange(selectedYear, selectedMonth).map((day) => (
-              <Picker.Item key={day} label={day} value={day} />
-            ))}
-          </Picker>
+          />
         )}
       </View>
-      <View>
-
-      </View>
+      {/* Další filtry zde */}
     </View>
   );
 };
